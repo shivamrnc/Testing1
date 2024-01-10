@@ -15,7 +15,7 @@ public class GoogleSearchPage {
 
 	private By btn_Enter = By.name("q");
 	
-	//private By btn_Login = By.className("l");
+	
 
 
 	

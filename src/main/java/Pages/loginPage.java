@@ -15,10 +15,13 @@ public class loginPage {
 
 	private By btn_continue = By.className("a-button-input");
 
-	private By txt_password = By.id("ap_ppassword");
+	private By txt_password = By.id("ap_password");
 
 
 	private By btn_login = By.id("signInSubmit");
+	private By txt_product = By.name("field-keywords");
+	
+	private By btn_SearchButton = By.id("nav-search-submit-button");
 	
 	
 	
@@ -53,16 +56,16 @@ public class loginPage {
 //	}
 //	
 //	
-//	public void enterProduct() {
-//		
-//		driver.findElement(txt_product ).sendKeys("iphone");
-//	}
+	public void enterProduct() {
+		
+		driver.findElement(txt_product ).sendKeys("iphone");
+	}
 //	
 //	
-//	public void HitSearchButton() {
-//		
-//		driver.findElement(btn_SearchButton).sendKeys(Keys.RETURN);
-//	}
+	public void HitSearchButton() {
+		
+		driver.findElement(btn_SearchButton).sendKeys(Keys.RETURN);
+	}
 	
 	
 //	public void CheckElement() {
@@ -75,6 +78,9 @@ public class loginPage {
 		
 		driver.findElement(txt_password).sendKeys("Abc@123456");
 		driver.findElement(btn_login).click();
+		
+		driver.findElement(txt_product ).sendKeys("iphone");
+		driver.findElement(btn_SearchButton).sendKeys(Keys.RETURN);
 		
 		
 //		driver.findElement(txt_product).sendKeys("iphone");

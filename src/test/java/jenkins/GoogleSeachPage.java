@@ -16,9 +16,14 @@ public class GoogleSeachPage {
 	
 	public static void main(String[] args) {
 		
+		String projectPath = System.getProperty("user.dir");
+//		System.out.println("Project path is : "+projectPath);
+		
+		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver.exe");
+		
 		
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\shivamchoubey\\eclipse-workspace\\Jenkins\\drivers\\chromedriver.exe");
+		
 		WebDriver driver = new ChromeDriver();
 		
 		Google = new GoogleSearchPage(driver);
